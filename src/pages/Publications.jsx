@@ -78,50 +78,9 @@ function Publications() {
         </div>
       </section>
 
-      {/* Stats */}
-
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 md:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-            {[
-              {
-                value: "15+",
-                label: "Publications",
-              },
-              {
-                value: "8+",
-                label: "Journal Papers",
-              },
-              {
-                value: "7+",
-                label: "Conference Papers",
-              },
-              {
-                value: "100+",
-                label: "Citations",
-              },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.1)] text-center"
-              >
-                <h2 className="text-4xl font-bold text-[#071d49]">
-                  {item.value}
-                </h2>
-
-                <p className="mt-2 text-gray-600">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Search */}
 
-      <section className="pb-12">
+      <section className="pb-12 py-10">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
 
           <div className="relative">
