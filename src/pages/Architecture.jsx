@@ -125,6 +125,132 @@ function Architecture() {
             </p>
           </div>
         </div>
+        {/* Architecture Phases */}
+        <div className="mt-20 space-y-10">
+
+          {/* Phase 1 */}
+          <div className="bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100">
+
+            <h2 className="text-3xl font-bold text-[#071d49] mb-6">
+              Phase 1: CNN Feature Extraction
+            </h2>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              The Convolutional Neural Network (CNN) operates on the raw telemetry data [11]:
+            </p>
+
+            <div className="bg-gray-100 rounded-xl p-5 text-center text-2xl font-semibold text-[#071d49] mb-6">
+              X = [x₁, x₂, ..., xₜ]
+            </div>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              where each xᵢ represents a data point recorded at a specific time step
+              or within a defined time window. The primary objective of the CNN is to
+              capture spatial patterns and extract meaningful features from the
+              telemetry data.
+            </p>
+
+            <div className="bg-[#071d49] text-white rounded-xl p-5 text-center text-2xl font-semibold mb-6">
+              Fcnn(X) = CNN(X, Wcnn)
+            </div>
+
+            <p className="text-gray-700 leading-8">
+              Fcnn(X) serves as the spatial feature representation derived from the
+              input telemetry data, enabling subsequent anomaly detection and analysis.
+            </p>
+
+          </div>
+
+          {/* Phase 2 */}
+          <div className="bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100">
+
+            <h2 className="text-3xl font-bold text-[#071d49] mb-6">
+              Phase 2: LSTM Temporal Modeling
+            </h2>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              The CNN extracts spatial features, which are then processed by the
+              Long Short-Term Memory (LSTM) network to capture the temporal
+              dependencies in the telemetry data.
+            </p>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              Let Flstm(X) represent the LSTM's output after temporal feature
+              extraction, and Wlstm stand for the LSTM model's weights.
+            </p>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              The following is an expression for the temporal modeling:
+            </p>
+
+            <div className="bg-[#071d49] text-white rounded-xl p-5 text-center text-2xl font-semibold mb-6">
+              Flstm(X) = LSTM(Fcnn(X), Wlstm)
+            </div>
+
+            <p className="text-gray-700 leading-8">
+              Here, Flstm(X) represents the temporal feature representation
+              derived from the CNN-extracted features and Fcnn(X), capturing
+              the time-dependent patterns essential for anomaly detection.
+            </p>
+
+          </div>
+
+          {/* Phase 3 */}
+          <div className="bg-white rounded-2xl p-8 shadow-[0_10px_30px_rgba(0,0,0,0.15)] border border-gray-100">
+
+            <h2 className="text-3xl font-bold text-[#071d49] mb-6">
+              Phase 3: Anomaly Detection
+            </h2>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              The outputs of the CNN and LSTM models are integrated to provide
+              the final anomaly detection result. This can be accomplished by:
+            </p>
+
+            <ol className="list-decimal pl-8 text-gray-700 leading-8 mb-6 space-y-2">
+              <li>
+                Individual thresholds can be set for the CNN and LSTM predictions.
+              </li>
+              <li>
+                Their outputs can be combined using a probabilistic method like
+                weighted fusion or averaging.
+              </li>
+            </ol>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              The symbols pcnn and plstm represent the anomaly scores generated
+              by the CNN and LSTM models, respectively.
+            </p>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              The following equation can be used to get the cumulative anomaly score:
+            </p>
+
+            <div className="bg-[#071d49] text-white rounded-xl p-5 text-center text-2xl font-semibold mb-6">
+              pfinal(X) = α · pcnn(X) + (1 − α) · plstm(X)
+            </div>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              where α is a weighting coefficient that controls how much each
+              model contributes to the ultimate choice.
+            </p>
+
+            <p className="text-gray-700 leading-8 mb-6">
+              When pfinal(X) exceeds a predetermined threshold, the system marks
+              the case as anomalous.
+            </p>
+
+            <p className="text-gray-700 leading-8">
+              The anomaly scores from both models are calculated by the
+              detect_anomaly function and combined using a weighted total,
+              where α indicates each model's effect. The function labels the
+              instance as "Anomaly Detected" if the final anomaly score is
+              greater than the threshold, and as "Normal" otherwise.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
     </section>
