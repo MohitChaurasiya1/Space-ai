@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileTeamOpen, setMobileTeamOpen] = useState(false);
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setIsOpen(false);
+    setMobileTeamOpen(false);
   };
 
   const links = [
@@ -18,13 +20,13 @@ function Navbar() {
     { name: "Architecture", path: "/architecture" },
     { name: "Publications", path: "/publications" },
     { name: "Contact", path: "/contact" },
-    
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[9999] w-full bg-[#071d49] text-white shadow-lg">
       <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between px-4 md:h-20 md:px-6">
-
+        
+        {/* Logo */}
         <Link
           to="/"
           onClick={scrollTop}
@@ -41,19 +43,66 @@ function Navbar() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-8 text-[15px] font-medium md:flex">
-          {links.map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              onClick={scrollTop}
-              className="hover:text-blue-300 transition"
+        {/* Desktop Navigation */}
+        <div className="hidden items-center gap-6 lg:gap-8 text-[15px] font-medium md:flex">
+          
+          {links
+            .filter((link) => link.name !== "Contact")
+            .map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                onClick={scrollTop}
+                className="hover:text-blue-300 transition"
+              >
+                {link.name}
+              </Link>
+            ))}
+
+          {/* Team Dropdown */}
+          <div className="relative group">
+            <button
+              type="button"
+              className="flex items-center gap-1 cursor-pointer hover:text-blue-300 transition"
             >
-              {link.name}
-            </Link>
-          ))}
+              Team
+              <ChevronDown size={16} />
+            </button>
+
+            <div className="absolute right-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="min-w-[220px] overflow-hidden rounded-lg border border-white/10 bg-[#071d49] shadow-xl">
+                
+                <Link
+                  to="/team/members"
+                  onClick={scrollTop}
+                  className="block px-5 py-4 hover:bg-blue-900 transition"
+                >
+                  Members
+                </Link>
+
+                <Link
+                  to="/team/students"
+                  onClick={scrollTop}
+                  className="block px-5 py-4 hover:bg-blue-900 transition"
+                >
+                  Students
+                </Link>
+
+              </div>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <Link
+            to="/contact"
+            onClick={scrollTop}
+            className="hover:text-blue-300 transition"
+          >
+            Contact
+          </Link>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           type="button"
           className="flex flex-shrink-0 items-center justify-center md:hidden"
@@ -63,8 +112,10 @@ function Navbar() {
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {isOpen && (
         <div className="w-full bg-[#071d49] md:hidden">
+
           {links.map((link) => (
             <Link
               key={link.name}
@@ -75,6 +126,45 @@ function Navbar() {
               {link.name}
             </Link>
           ))}
+
+          {/* Mobile Team Dropdown */}
+          <div className="border-t border-white/10">
+            
+            <button
+              type="button"
+              onClick={() => setMobileTeamOpen(!mobileTeamOpen)}
+              className="flex w-full items-center justify-between px-6 py-4"
+            >
+              <span>Team</span>
+
+              <ChevronDown
+                size={18}
+                className={`transition-transform duration-200 ${
+                  mobileTeamOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+
+            {mobileTeamOpen && (
+              <>
+                <Link
+                  to="/team/members"
+                  onClick={scrollTop}
+                  className="block px-10 py-3 text-sm text-gray-300 hover:text-white"
+                >
+                  Members
+                </Link>
+
+                <Link
+                  to="/team/students"
+                  onClick={scrollTop}
+                  className="block px-10 py-3 text-sm text-gray-300 hover:text-white"
+                >
+                  Students
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       )}
     </nav>

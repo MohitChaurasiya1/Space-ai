@@ -10,6 +10,8 @@ import Methodology from "./pages/Methodology";
 import Architecture from "./pages/Architecture";
 import Contact from "./pages/Contact";
 import Publications from "./pages/Publications";
+import Members from "./pages/Members";
+import Students from "./pages/Students";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
           <Route path="/architecture" element={<Architecture />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/team/members" element={<Members />} />
+          <Route path="/team/students" element={<Students />} />
+          
         </Route>
       </Routes>
     </BrowserRouter>
