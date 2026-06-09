@@ -11,6 +11,7 @@ import Architecture from "./pages/Architecture";
 import Publications from "./pages/Publications";
 import Members from "./pages/Members";
 import Students from "./pages/Students";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/publications" element={<Publications />} />
           <Route path="/team/members" element={<Members />} />
           <Route path="/team/students" element={<Students />} />
+          <Route path="/contact" element={<Contact />} />
           
         </Route>
       </Routes>
