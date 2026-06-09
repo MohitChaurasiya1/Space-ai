@@ -17,6 +17,7 @@ function Navbar() {
     { name: "Methodology", path: "/methodology" },
     { name: "Architecture", path: "/architecture" },
     { name: "Contact", path: "/contact" },
+    { name: "Publications", path: "/publications" },
   ];
 
   return (
