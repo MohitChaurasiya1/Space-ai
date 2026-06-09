@@ -55,26 +55,11 @@ function Methodology() {
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
 
-        <h1 className="text-4xl md:text-5xl font-bold text-[#071d49] mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-[#071d49] mb-4 py-10">
           Methodology
         </h1>
 
-        <p className="text-xl text-purple-700 font-semibold mb-10">
-          Figure 2 explains the step by step phases to develop the proposed solution.
-        </p>
 
-        {/* Methodology Image */}
-        <div className="mb-16">
-          <img
-            src="/images/methodology.jpeg"
-            alt="Proposed Layered Architecture"
-            className="w-full rounded-2xl shadow-2xl"
-          />
-
-          <p className="text-center text-gray-600 mt-4">
-            Figure 2: Proposed Layered architecture for AI-based embedded system for Spacecraft health monitoring
-          </p>
-        </div>
 
         {/* Timeline */}
         <div className="space-y-8">
@@ -92,6 +77,24 @@ function Methodology() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="pt-10">
+          <p className="text-xl text-purple-700 font-semibold mb-10">
+            This figure  explains the step by step phases to develop the proposed solution.
+          </p>
+
+          {/* Methodology Image */}
+          <div className="mb-15">
+            <img
+              src="/images/methodology.jpeg"
+              alt="Proposed Layered Architecture"
+              className="w-full md:w-[70%] lg:w-[60%] mx-auto rounded-2xl shadow-2xl"
+            />
+
+            <p className="text-center text-gray-600 mt-4">
+              Figure 2: Proposed Layered architecture for AI-based embedded system for Spacecraft health monitoring
+            </p>
+          </div>
         </div>
 
         {/* Expected Deliverables */}
