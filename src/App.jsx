@@ -9,6 +9,8 @@ import Objectives from "./pages/Objectives";
 import Methodology from "./pages/Methodology";
 import Architecture from "./pages/Architecture";
 import Publications from "./pages/Publications";
+import Members from "./pages/Members";
+import Students from "./pages/Students";
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
           <Route path="/methodology" element={<Methodology />} />
           <Route path="/architecture" element={<Architecture />} />
           <Route path="/publications" element={<Publications />} />
+          <Route path="/team/members" element={<Members />} />
+          <Route path="/team/students" element={<Students />} />
+          
         </Route>
       </Routes>
     </BrowserRouter>
