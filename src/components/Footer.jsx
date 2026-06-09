@@ -54,19 +54,7 @@ function Footer() {
 
         </div>
 
-        {/* Research Area */}
-        <div className="border-t border-white/20 mt-16 pt-10">
-          <h3 className="text-4xl font-extrabold mb-6">
-            Research Areas
-          </h3>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-gray-300">
-            <p>Spacecraft Health Monitoring</p>
-            <p>Embedded AI Systems</p>
-            <p>Anomaly Detection</p>
-            <p>Telemetry Analysis</p>
-          </div>
-        </div>
+        
 
         {/* Copyright */}
         <div className="border-t border-white/20 mt-12 pt-8 text-center text-sm text-gray-300 font-bold">
