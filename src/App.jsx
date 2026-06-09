@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Objectives from "./pages/Objectives";
 import Methodology from "./pages/Methodology";
 import Architecture from "./pages/Architecture";
-import Contact from "./pages/Contact";
 import Publications from "./pages/Publications";
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
           <Route path="/objectives" element={<Objectives />} />
           <Route path="/methodology" element={<Methodology />} />
           <Route path="/architecture" element={<Architecture />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/publications" element={<Publications />} />
         </Route>
       </Routes>
