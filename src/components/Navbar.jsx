@@ -32,7 +32,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[9999] w-full bg-[#071d49] text-white shadow-lg">
-      <div className="mx-auto flex h-16 w-full max-w-[1500px] items-center justify-between px-4 md:h-20 md:px-6">
+      <div className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between px-4 md:h-20 md:px-6">
         
         <Link
           to="/"
