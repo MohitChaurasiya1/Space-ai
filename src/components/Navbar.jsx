@@ -12,6 +12,15 @@ function Navbar() {
     setMobileTeamOpen(false);
   };
 
+  const scrollToFooter = () => {
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+    setIsOpen(false);
+    setMobileTeamOpen(false);
+  };
+
   const links = [
     { name: "Welcome", path: "/" },
     { name: "About", path: "/about" },
@@ -19,14 +28,12 @@ function Navbar() {
     { name: "Methodology", path: "/methodology" },
     { name: "Architecture", path: "/architecture" },
     { name: "Publications", path: "/publications" },
-    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-[9999] w-full bg-[#071d49] text-white shadow-lg">
-      <div className="mx-auto flex h-16 w-full max-w-[1600px] items-center justify-between px-4 md:h-20 md:px-6">
+      <div className="mx-auto flex h-16 w-full max-w-[1500px] items-center justify-between px-4 md:h-20 md:px-6">
         
-        {/* Logo */}
         <Link
           to="/"
           onClick={scrollTop}
@@ -43,23 +50,18 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <div className="hidden items-center gap-6 lg:gap-8 text-[15px] font-medium md:flex">
-          
-          {links
-            .filter((link) => link.name !== "Contact")
-            .map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                onClick={scrollTop}
-                className="hover:text-blue-300 transition"
-              >
-                {link.name}
-              </Link>
-            ))}
+          {links.map((link) => (
+            <Link
+              key={link.name}
+              to={link.path}
+              onClick={scrollTop}
+              className="hover:text-blue-300 transition"
+            >
+              {link.name}
+            </Link>
+          ))}
 
-          {/* Team Dropdown */}
           <div className="relative group">
             <button
               type="button"
@@ -71,7 +73,6 @@ function Navbar() {
 
             <div className="absolute right-0 top-full pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div className="min-w-[220px] overflow-hidden rounded-lg border border-white/10 bg-[#071d49] shadow-xl">
-                
                 <Link
                   to="/team/members"
                   onClick={scrollTop}
@@ -87,22 +88,18 @@ function Navbar() {
                 >
                   Students
                 </Link>
-
               </div>
             </div>
           </div>
 
-          {/* Contact */}
-          <Link
-            to="/contact"
-            onClick={scrollTop}
+          <button
+            onClick={scrollToFooter}
             className="hover:text-blue-300 transition"
           >
             Contact
-          </Link>
+          </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           type="button"
           className="flex flex-shrink-0 items-center justify-center md:hidden"
@@ -112,10 +109,8 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isOpen && (
         <div className="w-full bg-[#071d49] md:hidden">
-
           {links.map((link) => (
             <Link
               key={link.name}
@@ -127,9 +122,7 @@ function Navbar() {
             </Link>
           ))}
 
-          {/* Mobile Team Dropdown */}
           <div className="border-t border-white/10">
-            
             <button
               type="button"
               onClick={() => setMobileTeamOpen(!mobileTeamOpen)}
@@ -165,6 +158,13 @@ function Navbar() {
               </>
             )}
           </div>
+
+          <button
+            onClick={scrollToFooter}
+            className="block w-full text-left border-t border-white/10 px-6 py-4 text-base"
+          >
+            Contact
+          </button>
         </div>
       )}
     </nav>

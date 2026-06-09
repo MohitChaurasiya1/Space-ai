@@ -9,8 +9,8 @@ function Students() {
     },
     {
       id: 3,
-      name: "Priya Verma",
-      role: "M.Tech Research Scholar",
+      name: "Mohit Chaurasiya",
+      role: "B.Tech Research Scholar",
       desc: "Working on telemetry data preprocessing, feature extraction, and anomaly detection in space mission datasets.",
       image: "/images/students/priya.jpg",
     },
