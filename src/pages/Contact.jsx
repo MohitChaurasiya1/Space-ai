@@ -44,14 +44,14 @@ function Contact() {
               <p className="font-bold">
                 Co-Principal Investigator:
               </p>
-              <p>Mr. Amit Kumar Singh</p>
+              <p>Mr. ABC</p>
               <p>Email: abc@istrac.gov.in</p>
             </div>
             <div>
               <p className="font-bold">
-                Research Assistant
+                Research Associate
               </p>
-              <p>Mr. rahul </p>
+              <p>Mr. ABC </p>
               <p>Email: abc@istrac.gov.in</p>
             </div>
 
@@ -76,8 +76,7 @@ function Contact() {
             </p>
 
             <p>
-              <strong>Location:</strong> Prayagraj,
-              Uttar Pradesh, India
+              <strong>Location:</strong> CC-3, IIITA, Prayagraj, Uttar Pradesh, India
             </p>
 
           </div>

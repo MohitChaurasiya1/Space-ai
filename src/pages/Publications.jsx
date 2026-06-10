@@ -114,7 +114,7 @@ function Publications() {
                 key={year}
                 className="mb-16"
               >
-                <h2 className="text-4xl font-serif font-bold text-[#071d49] mb-8 border-b pb-4">
+                <h2 className="text-4xl font-sans font-bold text-[#071d49] mb-8 border-b pb-4">
                   {year}
                 </h2>
 
@@ -163,10 +163,6 @@ function Publications() {
                         </div>
 
                         <div className="flex gap-3">
-
-                          <button className="px-5 py-2 rounded-lg bg-[#071d49] text-white hover:bg-blue-900 transition">
-                            PDF
-                          </button>
 
                           <button className="px-5 py-2 rounded-lg border border-[#071d49] text-[#071d49] hover:bg-[#071d49] hover:text-white transition flex items-center gap-2">
                             DOI

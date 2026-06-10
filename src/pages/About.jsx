@@ -56,6 +56,43 @@ function About() {
           </div>
 
         </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16">
+
+          {/* Mission Card */}
+          <div className="bg-white rounded-3xl p-10 shadow-[0_15px_40px_rgba(0,0,0,0.15)] border-t-4 border-[#071d49]">
+            <h2 className="text-4xl font-bold text-[#071d49] mb-6">
+              Mission
+            </h2>
+
+            <p className="text-lg text-gray-700 leading-9">
+              To develop an AI-powered embedded system for spacecraft health
+              monitoring that enables real-time anomaly detection, fault
+              diagnosis, and autonomous decision support while operating
+              efficiently within the limited computational resources of
+              onboard spacecraft. The system aims to enhance mission safety,
+              reliability, and operational efficiency through intelligent
+              telemetry analysis and adaptive AI technologies.
+            </p>
+          </div>
+
+          {/* Vision Card */}
+          <div className="bg-white rounded-3xl p-10 shadow-[0_15px_40px_rgba(0,0,0,0.15)] border-t-4 border-purple-700">
+            <h2 className="text-4xl font-bold text-purple-700 mb-6">
+              Vision
+            </h2>
+
+            <p className="text-lg text-gray-700 leading-9">
+              To build intelligent, autonomous, and resilient spacecraft
+              capable of continuously monitoring their own health,
+              predicting failures, and ensuring safer, more reliable,
+              and mission-ready space exploration. The long-term vision
+              is to support future ISRO missions and human spaceflight
+              programs with advanced onboard AI systems that reduce
+              dependence on ground intervention.
+            </p>
+          </div>
+
+        </div>
 
       </div>
     </section>
