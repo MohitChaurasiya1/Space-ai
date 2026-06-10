@@ -25,19 +25,8 @@ function Publications() {
         type: "Journal",
       },
     ],
-
-    2025: [
-      {
-        title:
-          "Telemetry Data Analysis using Machine Learning",
-        authors:
-          "Research Team",
-        venue:
-          "Journal of Space Technology",
-        type: "Journal",
-      },
-    ],
   };
+
 
   const filteredPublications = Object.entries(publications).reduce(
     (acc, [year, papers]) => {
@@ -136,11 +125,10 @@ function Publications() {
                             />
 
                             <span
-                              className={`px-3 py-1 rounded-full text-sm font-medium ${
-                                paper.type === "Journal"
-                                  ? "bg-purple-100 text-purple-700"
-                                  : "bg-blue-100 text-blue-700"
-                              }`}
+                              className={`px-3 py-1 rounded-full text-sm font-medium ${paper.type === "Journal"
+                                ? "bg-purple-100 text-purple-700"
+                                : "bg-blue-100 text-blue-700"
+                                }`}
                             >
                               {paper.type}
                             </span>

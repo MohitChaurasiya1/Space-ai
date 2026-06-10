@@ -38,6 +38,7 @@ function Contact() {
                 Principal Investigator:
               </p>
               <p>Prof. Sonali Aggrawal</p>
+              <p>Email: sonali@iiita.ac.in</p>
             </div>
 
             <div>
