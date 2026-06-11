@@ -11,7 +11,7 @@ function About() {
               About
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-purple-700 mb-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-8">
               Spacecraft Health Monitoring (SHM)
             </h2>
 
@@ -60,7 +60,7 @@ function About() {
 
           {/* Mission Card */}
           <div className="bg-white rounded-3xl p-10 shadow-[0_15px_40px_rgba(0,0,0,0.15)] border-t-4 border-[#071d49]">
-            <h2 className="text-4xl font-bold text-[#071d49] mb-6">
+            <h2 className="text-4xl font-bold  text-blue-900 mb-6">
               Mission
             </h2>
 
@@ -77,7 +77,7 @@ function About() {
 
           {/* Vision Card */}
           <div className="bg-white rounded-3xl p-10 shadow-[0_15px_40px_rgba(0,0,0,0.15)] border-t-4 border-purple-700">
-            <h2 className="text-4xl font-bold text-purple-700 mb-6">
+            <h2 className="text-4xl font-bold  text-blue-900 mb-6">
               Vision
             </h2>
 
