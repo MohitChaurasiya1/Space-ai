@@ -24,7 +24,7 @@ function Home() {
       <section className="bg-white py-16">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
 
-          <h2 className="text-4xl font-serif font-bold text-purple-700 mb-8">
+          <h2 className="text-4xl font-serif font-bold text-blue-900 mb-8">
             Problem Statement
           </h2>
 
@@ -44,7 +44,7 @@ function Home() {
             Additionally, the computational resources available onboard spacecraft are limited, posing challenges in deploying advanced anomaly detection algorithms.
           </p>
 
-          <h2 className="text-3xl font-serif font-bold  mb-8">
+          <h2 className="text-3xl font-serif font-bold  text-blue-900  mb-8">
             Research Description
           </h2>
 
@@ -53,7 +53,7 @@ function Home() {
           </p>
 
           <div className="mt-14">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-purple-700 mb-8">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-blue-900 mb-8">
               Scope of the Work
             </h2>
 
