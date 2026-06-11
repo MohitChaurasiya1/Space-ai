@@ -11,7 +11,7 @@ function Architecture() {
               System Architecture
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-purple-700 mb-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-8">
               Integrated AI-Based Fault Classification and Health Monitoring
             </h2>
 
@@ -84,7 +84,7 @@ function Architecture() {
               System Architecture - AI Pipelines
             </h1>
 
-            <h2 className="text-2xl md:text-3xl font-semibold text-purple-700 mb-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-8">
               Approach
             </h2>
 

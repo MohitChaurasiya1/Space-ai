@@ -58,7 +58,7 @@ function Objectives() {
   return (
     <section className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-[#071d49] mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold  text-blue-900 mb-4">
           Research Objectives
         </h1>
 
@@ -72,7 +72,7 @@ function Objectives() {
               key={index}
               className="bg-white rounded-2xl p-7 border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.14)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.22)] transition-all duration-300"
             >
-              <h2 className="text-2xl font-bold text-[#071d49] mb-5">
+              <h2 className="text-2xl font-bold  text-blue-900 mb-5">
                 {item.title}
               </h2>
 

@@ -68,7 +68,7 @@ function Methodology() {
               key={index}
               className="bg-white border-l-4 border-[#071d49] rounded-2xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.14)]"
             >
-              <h2 className="text-2xl font-bold text-[#071d49] mb-4">
+              <h2 className="text-2xl font-bold  text-blue-900 mb-4">
                 {phase.title}
               </h2>
 
@@ -109,7 +109,7 @@ function Methodology() {
                 key={index}
                 className="bg-white rounded-2xl p-7 shadow-[0_10px_30px_rgba(0,0,0,0.15)]"
               >
-                <h3 className="text-2xl font-bold text-purple-700 mb-5">
+                <h3 className="text-2xl font-bold text-blue-900 mb-5">
                   {item.title}
                 </h3>
 
